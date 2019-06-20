@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <fieldset>
+        <button><a href="{% url 'home'%}" style="color: #000000"> Voltar para página inicial</a></button>
+        <div class="panel panel-primary">
+        <div class="panel-heading h2">Usuários Cadastrados!</div>
+
+
+                    <ul>
+                        {% for inscritos in list %}
+                        <a href="exibir2/{{inscritos.id}}"><li>{{inscritos.nome}} - {{inscritos.cargo}}</li></a>
+                        {% endfor %}
+                    </ul>
+        </div>
+    </fieldset>
+{% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Peque um chave</title>
+</head>
+<body>
+    <h3>Escolha o Usuário!</h3>
+    <ul>
+        {% for inscritos in list %}
+        <li><a href="/pegarr/{{inscritos.id}}">{{inscritos.nome}} - {{inscritos.disponivel}}</a></li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

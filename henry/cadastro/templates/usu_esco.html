@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+  <button><a href="{% url 'home'%}" style="color: #000000"> Voltar para página inicial</a></button>
+<fieldset>
+        <div class="panel panel-primary"></div>
+        <div class="panel-heading h2">Chave {{chave.nome}}</div>
+    <ul>
+        <li>{{usuario.nome}} - {{usuario.cargo}}</li>
+
+    </ul>
+    <button class="btn btn-primary"><a href="/alterar2/{{usuario.id}}" style="color: #ffffff">Editar</a></button>
+        <p>
+        </p>
+    <button class="btn btn-danger"><a href="/deletar2/{{usuario.id}}" style="color: #ffffff">Deletar</a></button>
+        <p>
+        </p>
+    <button class="btn btn-success"><a href="/pegar/" style="color: #ffffff">Escolher uma Chave</a></button>
+    </fieldset>
+
+{% endblock %}
+

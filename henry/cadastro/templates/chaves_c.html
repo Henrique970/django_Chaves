@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <fieldset>
+        <button><a href="{% url 'home'%}" style="color: #000000"> Voltar para página inicial</a></button>
+        <div class="panel panel-primary">
+        <div class="panel-heading h2">Chaves Cadastradas!</div>
+
+
+                    <ul>
+                        {% for inscritos in list %}
+                       <a href="exibir/{{inscritos.id}}"><li>{{inscritos.nome}} - {{inscritos.disponivel}}</li></a>
+                        {% endfor %}
+                    </ul>
+        </div>
+
+    </fieldset>
+{% endblock %}
